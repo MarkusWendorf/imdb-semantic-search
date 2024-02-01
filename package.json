@@ -1,0 +1,43 @@
+{
+  "name": "semantic-search-demo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "import-imdb": "tsx ./src/lib/scripts/importImdb.ts",
+    "add-movies-to-search": "tsx ./src/lib/scripts/addMoviesToSearch.ts",
+    "test": "tsx ./src/lib/imdb/test.ts"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.3",
+    "drizzle-orm": "^0.29.3",
+    "jsdom": "^24.0.0",
+    "openai": "^4.25.0",
+    "pgvector": "^0.1.7",
+    "postgres": "^3.4.3"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "@types/jsdom": "^21.1.6",
+    "@types/node": "^20.11.6",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "prettier": "^3.1.1",
+    "prettier-plugin-svelte": "^3.1.2",
+    "svelte": "^4.2.9",
+    "svelte-check": "^3.6.0",
+    "tailwindcss": "^3.4.1",
+    "tslib": "^2.4.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.3"
+  },
+  "type": "module"
+}

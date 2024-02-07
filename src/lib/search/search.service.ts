@@ -3,13 +3,14 @@ import OpenAI from "openai";
 import { l2Distance } from "pgvector/drizzle-orm";
 import type { Database } from "../database/db";
 import { movies, type Movie } from "../database/movies/movies.sql";
+import { env } from "$env/dynamic/private";
 
 export class SearchService {
   private openai: OpenAI;
 
   constructor(private db: Database) {
     this.openai = new OpenAI({
-      apiKey: "<your-api-key-goes-here>",
+      apiKey: env.OPEN_AI_KEY || "<your-key-goes-here>",
     });
   }
 

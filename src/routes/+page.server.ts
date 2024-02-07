@@ -14,6 +14,11 @@ export async function load({ url }) {
 
   return {
     search,
-    movies,
+    movies: movies.map((movie) => ({
+      id: movie.id,
+      url: movie.url,
+      imageUrl: movie.imageUrl,
+      title: movie.title,
+    })),
   };
 }

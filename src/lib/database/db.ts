@@ -1,8 +1,9 @@
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 import { schema } from "./schema";
+import { env } from "$env/dynamic/private";
 
-const { DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD } = process.env;
+const { DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD } = env;
 
 export const connection = {
   host: DB_HOST || "127.0.0.1",

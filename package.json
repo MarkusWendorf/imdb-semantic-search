@@ -14,7 +14,7 @@
     "test": "tsx ./src/lib/imdb/test.ts"
   },
   "dependencies": {
-    "csv-parse": "^5.5.3",
+    "@sveltejs/adapter-node": "^4.0.1",
     "drizzle-orm": "^0.29.3",
     "jsdom": "^24.0.0",
     "openai": "^4.25.0",
@@ -22,6 +22,7 @@
     "postgres": "^3.4.3"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.0",
     "@sveltejs/adapter-auto": "^3.0.0",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
